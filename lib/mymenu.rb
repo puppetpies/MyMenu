@@ -12,7 +12,7 @@ require 'readline'
 class MyMenu
 
   attr_writer :mymenuname, :mymenugreeting, :prompt, :promptcolor, :menutitlecolour, :mymenushow, :debug
-  attr_reader :menuitems
+  attr_reader :menuitems, :line
   
   def initialize
     @mymenuname = "MyMenu"
@@ -81,11 +81,15 @@ class MyMenu
   
   def evalreadline(&block)
     while buf2 = Readline.readline("#{@promptcolor}#{@prompt}>\e[0m\ ", true)
+      block.instance_eval do |t|
+        instance_variable_set("@line", buf2)
+      end
       puts "Eval Readline Pre execution" if @debug >= 2
       block.call
       puts "Post execution of block in Readline prompt" if @debug >= 2
       break
     end
+    return block.instance_variable_get("@line")
   end
   
   def evalreadline?(readlineprompt, &codeeval)
