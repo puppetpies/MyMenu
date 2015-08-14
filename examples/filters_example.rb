@@ -46,7 +46,8 @@ x.definemenuitem("setfilters") do
   y = MyMenu.new
   #y.debug = 3
   y.prompt = "Trafiz {Filters}>"
-  y.definemenuitem("setfilter", true) do
+  retval = y.definemenuitem("setfilter", true) do |n|
+    #instance_variables
     puts "Hello"
     a = 2
     if a == 1
@@ -56,8 +57,10 @@ x.definemenuitem("setfilters") do
       puts "B: #{b}"
     end
   end
+  puts "Retval: #{retval}"
   # Execute function you just created
-  y.setfilter
+  retval2 = y.setfilter
+  puts "Retval2: #{retval2}"
 end
 # Define your list items
 x.additemtolist(1, "List Filters", "listfilters;")
