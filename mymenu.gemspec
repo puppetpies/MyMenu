@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'mymenu'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2015-08-09'
   s.summary     = "CLI Menu system with readline in Ruby"
   s.description = "Create readline menu's quickly"
