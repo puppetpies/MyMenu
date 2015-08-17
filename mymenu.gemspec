@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Create readline menu's quickly"
   s.authors     = ["Brian Hood"]
   s.email       = 'brianh6854@googlemail.com'
-  s.files       = ["examples/filters_example.rb", "lib/mymenu.rb"]
+  s.files       = ["examples/quick_test.rb", "examples/filters_example.rb", "lib/mymenu.rb"]
   s.homepage    =
     'https://github.com/puppetpies/MyMenu'
   s.license       = 'MIT'
