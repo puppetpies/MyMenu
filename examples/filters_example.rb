@@ -63,9 +63,9 @@ x.definemenuitem("setfilters") do
   puts "Retval2: #{retval2}"
 end
 # Define your list items
-x.additemtolist(1, "List Filters", "listfilters;")
-x.additemtolist(2, "Set Filters", "setfilters;")
-x.additemtolist(3, "Display Menu", "showmenu;")
-x.additemtolist(4, "Toggle Menu", "togglemenu;")
-x.additemtolist(5, "Exit Trafviz", "exit;")
+x.additemtolist("List Filters", "listfilters;")
+x.additemtolist("Set Filters", "setfilters;")
+x.additemtolist("Display Menu", "showmenu;")
+x.additemtolist("Toggle Menu", "togglemenu;")
+x.additemtolist("Exit Trafviz", "exit;")
 x.menu!

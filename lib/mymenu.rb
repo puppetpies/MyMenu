@@ -23,12 +23,14 @@ class MyMenu
     @mymenugreeting = "Welcome to MyMenu"
     @mymenutoggle = true
     @debug = 0
+    @number = 1
   end
   
   public
 
-  def additemtolist(number, name, func)
-    @menuitems << [number, "#{name}", "#{func}"]
+  def additemtolist(name, func)
+    @menuitems << [@number, "#{name}", "#{func}"]
+    @number += 1
   end
 
   def settitle(title)
